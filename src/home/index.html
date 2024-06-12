@@ -41,9 +41,11 @@
     <main>
       <section class="slideshow">
         <div class="container">
-          <div class="slide-button-wrapper"><button><</button></div>
-          <div class="slides">
-            <div class="slide horizontal">
+          <div class="slide-button-wrapper" id="slideshow-left-btn">
+            <button><</button>
+          </div>
+          <div class="slides" id="slides">
+            <div class="slide horizontal active">
               <div class="content">
                 <h3>Engajamento dos Fãs</h3>
                 <p>
@@ -71,7 +73,7 @@
                 </p>
               </div>
             </div>
-            <div class="slide active horizontal">
+            <div class="slide horizontal">
               <div class="content">
                 <h3>Parcerias Estratégicas</h3>
                 <p>
@@ -88,9 +90,13 @@
               </div>
             </div>
           </div>
-          <div class="slide-button-wrapper"><button>></button></div>
+          <div class="slide-button-wrapper" id="slideshow-right-btn">
+            <button>></button>
+          </div>
         </div>
       </section>
     </main>
   </body>
+
+  <script src="./home.js"></script>
 </html>
