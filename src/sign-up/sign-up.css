@@ -47,17 +47,21 @@ nav {
 
 main {
   flex: 1;
-  position: relative;
 }
 
-main > section {
+main > .container {
+  position: relative;
+  height: 100%;
+}
+
+main section {
   position: absolute;
   width: 100%;
   height: 100%;
   display: none;
 }
 
-main > section.active {
+main section.active {
   display: flex;
 }
 
@@ -98,13 +102,18 @@ section.chat > .content {
   flex-direction: row;
 }
 
-section.chat > .content > .preview,
-.buttons {
+section.character-creation > .buttons {
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-section.chat > .content > .preview {
-  background-color: red;
+section.character-creation > .preview {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
