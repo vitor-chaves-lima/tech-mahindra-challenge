@@ -100,6 +100,7 @@ section.chat {
 section.chat > .content {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 section.character-creation > .buttons {
@@ -107,6 +108,81 @@ section.character-creation > .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+section.character-creation > .buttons > .gender > #gender-male-btn {
+  background-color: #1c20ff;
+  color: #ffffff;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+section.character-creation > .buttons > .gender > #gender-male-btn > svg {
+  stroke: #ffffff;
+  fill: #ffffff;
+  width: 30px;
+  height: 30px;
+}
+
+section.character-creation > .buttons > .gender > #gender-female-btn {
+  background-color: #1c20ff;
+  color: #ffffff;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  border-radius: 6px;
+  border: 2px solid #ff0099;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+section.character-creation > .buttons > .gender > #gender-female-btn > svg {
+  stroke: #ff0099;
+  fill: #ff0099;
+  width: 30px;
+  height: 30px;
+}
+
+section.character-creation > .buttons > .gender {
+  display: flex;
+  gap: 60px;
+  justify-content: space-between;
+}
+
+section.character-creation > .buttons > .property {
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+}
+
+section.character-creation > .buttons > .property > span {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  font-size: 1.25rem;
+}
+
+section.character-creation > .buttons > .property > button {
+  background-color: #565656;
+  color: #ffffff;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  border-radius: 6px;
+  transition: 0.3s background-color;
+  border: none;
+  cursor: pointer;
 }
 
 section.character-creation > .preview {
