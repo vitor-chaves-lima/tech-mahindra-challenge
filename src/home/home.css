@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #0e110f;
   color: #ffffff;
 }
 
@@ -25,6 +24,7 @@ header {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  background-color: #0e110f;
 }
 
 nav {
@@ -110,4 +110,98 @@ nav {
 
 .hero > .container .image-wrapper > img {
   width: 400px;
+}
+
+.slideshow {
+  height: 100vh;
+  display: flex;
+}
+
+.slideshow > .container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.slideshow > .container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 50px;
+  align-items: center;
+}
+
+.slideshow > .container > .slide-button-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.slideshow > .container > .slides {
+  flex: 1;
+  height: 60%;
+  display: flex;
+  border-radius: 6px;
+  position: relative;
+}
+
+.slideshow > .container > .slide-button-wrapper > button {
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  border: none;
+  background-color: #1c20ff;
+  color: #ffffff;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.slideshow > .container > .slides > .slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+}
+
+.slideshow > .container > .slides > .slide.active {
+  display: flex;
+  flex-direction: row;
+}
+
+.slideshow > .container > .slides > .horizontal > .content {
+  width: 50%;
+  background-color: #0e110f;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.slideshow > .container > .slides .content > h3 {
+  font-size: 1.75rem;
+}
+
+.slideshow > .container > .slides .content > p {
+  font-size: 1.25rem;
+}
+
+.slideshow > .container > .slides > .horizontal > .image-wrapper {
+  width: 50%;
+  background-color: #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.slideshow > .container > .slides > .horizontal > .image-wrapper > img {
+  height: 70%;
+  padding: 50px;
+
+  background-color: blue;
+  border-radius: 50%;
 }
