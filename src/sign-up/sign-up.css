@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+header,
+main,
+footer {
+  background-color: #0e110f;
+}
+
+nav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ffffff;
+}
+
+.container {
+  margin-inline: 200px;
+}
+
+.home-link {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+main {
+  flex: 1;
+  position: relative;
+}
+
+main > section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+main > section.active {
+  display: flex;
+}
+
+section.chat {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+section.chat > .content {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+section.chat > .content > img {
+  max-height: 300px;
+}
+
+section.chat > .content > div {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 1.25rem;
+  max-width: 300px;
+}
+
+section.chat {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+section.chat > .content {
+  display: flex;
+  flex-direction: row;
+}
+
+section.chat > .content > .preview,
+.buttons {
+  width: 50%;
+}
+
+section.chat > .content > .preview {
+  background-color: red;
+}
+
+footer {
+  border-top: 1px solid #ffffff;
+}
+
+footer .content {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 30px;
+}
+
+footer .content > button {
+  background-color: #2f8c55;
+  color: #ffffff;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  border-radius: 6px;
+  transition: 0.3s background-color;
+  border: none;
+  cursor: pointer;
+}
+
+footer .content > button:hover {
+  background-color: #185234;
+  color: #ffffff;
+}
