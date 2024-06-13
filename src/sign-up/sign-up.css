@@ -113,16 +113,21 @@ section.character-creation > .buttons {
 }
 
 section.character-creation > .buttons > .gender > #gender-male-btn {
-  background-color: #1c20ff;
-  color: #ffffff;
+  background-color: transparent;
+  color: #1c20ff;
   padding: 15px;
   text-decoration: none;
   font-size: 1.25rem;
   border-radius: 6px;
-  border: none;
+  border: 2px solid #1c20ff;
   cursor: pointer;
   justify-content: center;
   align-items: center;
+}
+
+section.character-creation > .buttons > .gender > #gender-male-btn.selected {
+  background-color: #1c20ff;
+  color: #ffffff;
 }
 
 section.character-creation > .buttons > .gender > #gender-male-btn > svg {
@@ -130,6 +135,15 @@ section.character-creation > .buttons > .gender > #gender-male-btn > svg {
   fill: #ffffff;
   width: 30px;
   height: 30px;
+}
+
+section.character-creation
+  > .buttons
+  > .gender
+  > #gender-male-btn.selected
+  > svg {
+  stroke: #ffffff;
+  fill: #ffffff;
 }
 
 section.character-creation > .buttons > .gender > #gender-female-btn {
@@ -146,11 +160,25 @@ section.character-creation > .buttons > .gender > #gender-female-btn {
   background-color: transparent;
 }
 
+section.character-creation > .buttons > .gender > #gender-female-btn.selected {
+  background-color: #ff0099;
+  color: #ffffff;
+}
+
 section.character-creation > .buttons > .gender > #gender-female-btn > svg {
   stroke: #ff0099;
   fill: #ff0099;
   width: 30px;
   height: 30px;
+}
+
+section.character-creation
+  > .buttons
+  > .gender
+  > #gender-female-btn.selected
+  > svg {
+  stroke: #ffffff;
+  fill: #ffffff;
 }
 
 section.character-creation > .buttons > .gender {
