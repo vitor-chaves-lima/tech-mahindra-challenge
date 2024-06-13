@@ -1,5 +1,9 @@
 let selectedGender = "male";
 
+const characterHair = document.querySelector("#character-hair");
+const characterSkin = document.querySelector("#character-skin");
+const characterClothes = document.querySelector("#character-clothes");
+
 const hairLeftBtn = document.querySelector("#hair-left-btn");
 const hairRightBtn = document.querySelector("#hair-right-btn");
 const hairCount = 6;
@@ -19,11 +23,11 @@ const maleBtn = document.querySelector("#gender-male-btn");
 const femaleBtn = document.querySelector("#gender-female-btn");
 
 const handleClothesUpdate = () => {
-  console.log("Selected Clothes Index:", selectedClothesIndex);
+  characterClothes.src = `../../public/images/character-creator/other/uniform-${selectedClothesIndex}.png`;
 };
 
 const handleClothesDecrease = () => {
-  if (selectedClothesIndex == 0) {
+  if (selectedClothesIndex === 0) {
     selectedClothesIndex = clothesCount - 1;
   } else {
     selectedClothesIndex--;
@@ -33,7 +37,7 @@ const handleClothesDecrease = () => {
 };
 
 const handleClothesIncrease = () => {
-  if (selectedClothesIndex == clothesCount - 1) {
+  if (selectedClothesIndex === clothesCount - 1) {
     selectedClothesIndex = 0;
   } else {
     selectedClothesIndex++;
@@ -46,11 +50,11 @@ clothesLeftBtn.addEventListener("click", handleClothesDecrease);
 clothesRightBtn.addEventListener("click", handleClothesIncrease);
 
 const handleSkinUpdate = () => {
-  console.log("Selected Skin Index:", selectedSkinIndex);
+  characterSkin.src = `../../public/images/character-creator/${selectedGender}/skin/${selectedGender}-${selectedSkinIndex}.png`;
 };
 
 const handleSkinDecrease = () => {
-  if (selectedSkinIndex == 0) {
+  if (selectedSkinIndex === 0) {
     selectedSkinIndex = skinCount - 1;
   } else {
     selectedSkinIndex--;
@@ -60,7 +64,7 @@ const handleSkinDecrease = () => {
 };
 
 const handleSkinIncrease = () => {
-  if (selectedSkinIndex == skinCount - 1) {
+  if (selectedSkinIndex === skinCount - 1) {
     selectedSkinIndex = 0;
   } else {
     selectedSkinIndex++;
@@ -73,11 +77,11 @@ skinLeftBtn.addEventListener("click", handleSkinDecrease);
 skinRightBtn.addEventListener("click", handleSkinIncrease);
 
 const handleHairUpdate = () => {
-  console.log("Selected Hair Index:", selectedHairIndex);
+  characterHair.src = `../../public/images/character-creator/${selectedGender}/hair/${selectedGender}-${selectedHairIndex}.png`;
 };
 
 const handleHairDecrease = () => {
-  if (selectedHairIndex == 0) {
+  if (selectedHairIndex === 0) {
     selectedHairIndex = hairCount - 1;
   } else {
     selectedHairIndex--;
@@ -87,7 +91,7 @@ const handleHairDecrease = () => {
 };
 
 const handleHairIncrease = () => {
-  if (selectedHairIndex == hairCount - 1) {
+  if (selectedHairIndex === hairCount - 1) {
     selectedHairIndex = 0;
   } else {
     selectedHairIndex++;
@@ -109,7 +113,7 @@ const handleGenderUpdate = () => {
   selectedClothesIndex = 0;
   handleClothesUpdate();
 
-  if (selectedGender == "male") {
+  if (selectedGender === "male") {
     if (femaleBtn.classList.contains("selected")) {
       femaleBtn.classList.remove("selected");
     }
@@ -123,14 +127,14 @@ const handleGenderUpdate = () => {
 };
 
 const handleMaleGenderSelection = () => {
-  if (selectedGender != "male") {
+  if (selectedGender !== "male") {
     selectedGender = "male";
     handleGenderUpdate();
   }
 };
 
 const handleFemaleGenderSelection = () => {
-  if (selectedGender != "female") {
+  if (selectedGender !== "female") {
     selectedGender = "female";
     handleGenderUpdate();
   }

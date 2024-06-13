@@ -220,6 +220,24 @@ section.character-creation > .preview {
   align-items: center;
 }
 
+section.character-creation > .preview > .character {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+section.character-creation > .preview > .character > img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  max-height: 200px;
+  height: 100%;
+}
+
 footer {
   border-top: 1px solid #ffffff;
 }
