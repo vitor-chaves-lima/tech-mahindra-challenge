@@ -1,3 +1,45 @@
+let currentStep = 0;
+const backBtn = document.querySelector("#back-btn");
+const continueBtn = document.querySelector("#continue-btn");
+const sections = document.querySelectorAll(".container>section");
+
+const handleBack = () => {
+  sections.forEach(
+    (s) => s.classList.contains("active") && s.classList.remove("active")
+  );
+
+  currentStep -= 1;
+
+  if (currentStep < 3 && backBtn.classList.contains("visible")) {
+    backBtn.classList.remove("visible");
+    continueBtn.textContent = "Continuar";
+  } else {
+    backBtn.classList.add("visible");
+  }
+
+  sections[currentStep].classList.add("active");
+};
+
+const handleContinue = () => {
+  sections.forEach(
+    (s) => s.classList.contains("active") && s.classList.remove("active")
+  );
+
+  currentStep += 1;
+
+  if (currentStep == 3) {
+    continueBtn.textContent = "Finalizar cadastro";
+    backBtn.classList.add("visible");
+  } else {
+    continueBtn.textContent = "Continuar";
+  }
+
+  sections[currentStep].classList.add("active");
+};
+
+backBtn.addEventListener("click", handleBack);
+continueBtn.addEventListener("click", handleContinue);
+
 let selectedGender = "male";
 
 const characterHair = document.querySelector("#character-hair");

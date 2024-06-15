@@ -248,9 +248,10 @@ footer .content {
   justify-content: end;
   align-items: center;
   padding: 30px;
+  gap: 15px;
 }
 
-footer .content > button {
+footer .content > #continue-btn {
   background-color: #2f8c55;
   color: #ffffff;
   padding: 15px 20px;
@@ -262,7 +263,27 @@ footer .content > button {
   cursor: pointer;
 }
 
-footer .content > button:hover {
+footer .content > #continue-btn:hover {
   background-color: #185234;
   color: #ffffff;
+}
+
+footer .content > #back-btn {
+  display: none;
+  color: #000000;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  border-radius: 6px;
+  transition: 0.3s background-color;
+  border: none;
+  cursor: pointer;
+}
+
+footer .content > #back-btn.visible {
+  display: block;
+}
+
+footer .content > #back-btn:hover {
+  color: #000000;
 }
