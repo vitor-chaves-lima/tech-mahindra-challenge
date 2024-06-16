@@ -3,6 +3,28 @@ const backBtn = document.querySelector("#back-btn");
 const continueBtn = document.querySelector("#continue-btn");
 const sections = document.querySelectorAll(".container>section");
 
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+const passwordConfirmInput = document.getElementById("password-confirm");
+
+const handleSubmit = () => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(emailInput.value)) {
+    alert("O e-mail é inválido");
+    return;
+  }
+
+  console.log(passwordInput.value, passwordConfirmInput.value);
+
+  if (passwordInput.value !== passwordConfirmInput.value) {
+    alert("As senhas não correspondem.");
+    return;
+  }
+
+  alert("Cadastro finalizado, redirecionando usuário");
+  location.replace("../home")
+};
+
 const handleBack = () => {
   sections.forEach(
     (s) => s.classList.contains("active") && s.classList.remove("active")
@@ -21,11 +43,16 @@ const handleBack = () => {
 };
 
 const handleContinue = () => {
-  sections.forEach(
-    (s) => s.classList.contains("active") && s.classList.remove("active")
-  );
+  if (currentStep < 3) {
+    sections.forEach(
+      (s) => s.classList.contains("active") && s.classList.remove("active")
+    );
 
-  currentStep += 1;
+    currentStep += 1;
+    sections[currentStep].classList.add("active");
+  } else if (currentStep == 3) {
+    handleSubmit();
+  }
 
   if (currentStep == 3) {
     continueBtn.textContent = "Finalizar cadastro";
@@ -33,8 +60,6 @@ const handleContinue = () => {
   } else {
     continueBtn.textContent = "Continuar";
   }
-
-  sections[currentStep].classList.add("active");
 };
 
 backBtn.addEventListener("click", handleBack);

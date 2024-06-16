@@ -2,7 +2,6 @@ const leftSlideshowButton = document.querySelector("#slideshow-left-btn");
 const rightSlideshowButton = document.querySelector("#slideshow-right-btn");
 
 const slides = document.querySelectorAll("#slides .slide");
-console.log(slides);
 let selectedSlide = 0;
 
 const updateSlides = () => {
