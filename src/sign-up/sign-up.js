@@ -14,15 +14,13 @@ const handleSubmit = () => {
     return;
   }
 
-  console.log(passwordInput.value, passwordConfirmInput.value);
-
   if (passwordInput.value !== passwordConfirmInput.value) {
     alert("As senhas não correspondem.");
     return;
   }
 
   alert("Cadastro finalizado, redirecionando usuário");
-  location.replace("../home")
+  location.replace("../home");
 };
 
 const handleBack = () => {
