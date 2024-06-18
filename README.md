@@ -1,4 +1,4 @@
-# Challenge - Tech Mahindra - Python
+# Challenge - Tech Mahindra - Web Development
 
 Este repositório faz parte das entregas do Challenge da Tech Mahindra do curso de engenharia de software na FIAP ( 2024 ).
 
