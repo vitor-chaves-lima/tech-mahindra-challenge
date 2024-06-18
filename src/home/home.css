@@ -1,0 +1,207 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+header {
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: #0e110f;
+}
+
+nav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ffffff;
+}
+
+.home-link {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.container {
+  margin-inline: 200px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.hero > .container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+}
+
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 50%;
+}
+
+.hero .content > .text {
+  height: 100%;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.hero .content > .links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.hero .content .sign-up-btn {
+  background-color: #2f8c55;
+  color: #ffffff;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  border-radius: 6px;
+  transition: 0.3s background-color;
+}
+
+.hero .content .sign-up-btn:hover {
+  background-color: #185234;
+  color: #ffffff;
+}
+
+.hero .content .sign-in-btn {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.hero > .container .image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero > .container .image-wrapper > img {
+  width: 400px;
+}
+
+.slideshow {
+  height: 100vh;
+  display: flex;
+}
+
+.slideshow > .container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.slideshow > .container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 50px;
+  align-items: center;
+}
+
+.slideshow > .container > .slide-button-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.slideshow > .container > .slides {
+  flex: 1;
+  height: 60%;
+  display: flex;
+  border-radius: 6px;
+  position: relative;
+}
+
+.slideshow > .container > .slide-button-wrapper > button {
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  border: none;
+  background-color: #1c20ff;
+  color: #ffffff;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.slideshow > .container > .slides > .slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+}
+
+.slideshow > .container > .slides > .slide.active {
+  display: flex;
+  flex-direction: row;
+}
+
+.slideshow > .container > .slides > .horizontal > .content {
+  width: 50%;
+  background-color: #0e110f;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.slideshow > .container > .slides .content > h3 {
+  font-size: 1.75rem;
+}
+
+.slideshow > .container > .slides .content > p {
+  font-size: 1.25rem;
+}
+
+.slideshow > .container > .slides > .horizontal > .image-wrapper {
+  width: 50%;
+  background-color: #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.slideshow > .container > .slides > .horizontal > .image-wrapper > img {
+  height: 70%;
+  padding: 50px;
+
+  background-color: blue;
+  border-radius: 50%;
+}

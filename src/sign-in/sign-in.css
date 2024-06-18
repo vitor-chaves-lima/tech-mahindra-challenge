@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+header,
+main,
+footer {
+  background-color: #0e110f;
+}
+
+nav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ffffff;
+}
+
+.container {
+  margin-inline: 200px;
+}
+
+.home-link {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+main {
+  height: 100%;
+}
+
+main > .container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main > .container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+form > div > label {
+  font-size: 1.25rem;
+}
+
+form > div > input {
+  font-size: 1rem;
+  padding: 10px;
+  width: 300px;
+}
+
+footer {
+  border-top: 1px solid #ffffff;
+}
+
+footer .content {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 30px;
+  gap: 15px;
+}
+
+footer .content > #login-btn {
+  background-color: #2f8c55;
+  color: #ffffff;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  border-radius: 6px;
+  transition: 0.3s background-color;
+  border: none;
+  cursor: pointer;
+}
+
+footer .content > #login-btn:hover {
+  background-color: #185234;
+  color: #ffffff;
+}
